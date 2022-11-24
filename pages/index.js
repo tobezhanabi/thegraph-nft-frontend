@@ -14,7 +14,7 @@ export default function Home() {
     const { isWeb3Enabled, chainId } = useMoralis()
     const chainString = chainId ? parseInt(chainId).toString() : "31337"
     const marketplaceAddress = networkMapping[chainString].NftMarketplace[0]
-    const { loading, error, data: listedNfts } = useQuery(GET_ACTIVE_ITEMS)
+    const { loading, error, data } = useQuery(GET_ACTIVE_ITEMS)
 
     return (
         <div className="container mx-a uto">
